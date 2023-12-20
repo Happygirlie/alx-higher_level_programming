@@ -9,7 +9,7 @@ class Square:
         """square contructor 
         Args: size: length of a side of Square
         """
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
@@ -50,3 +50,4 @@ class Square:
 
     def __eq__(self, other):
         return self.area() == other.area()
+
