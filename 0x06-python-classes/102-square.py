@@ -9,29 +9,29 @@ class Square:
         """square contructor 
         Args: size: length of a side of Square
         """
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
-        """The propery of size as the length 
+        """The property of size as the length 
         of a side of Square
         Raises:
             TypeError: if size != int
             ValueErrorr: if size < 0
         """
-        return self.__size
+        return (self.__size)
 
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError('size must be an integer')
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError('size must be >= 0')
         self.__size = value
 
     def area(self):
         """Get the area instance to comparators"""
-        return self.__size * self.__size
+        return (self.__size * self.__size)
 
     def __le__(self, other):
         return self.area() <= other.area()
@@ -50,4 +50,3 @@ class Square:
 
     def __eq__(self, other):
         return self.area() == other.area()
-
